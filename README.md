@@ -1,6 +1,6 @@
 # Coq Versions List
 
-A script in Ruby to get Coq versions from GitHub releases API. Mainly used for the [asdf](https://github.com/asdf-vm/asdf) [Coq plugin](https://github.com/gingerhot/asdf-coq).
+A script in Ruby to get [Coq](https://coq.inria.fr/) versions from GitHub releases API. Mainly used for the [asdf](https://github.com/asdf-vm/asdf) - [Coq plugin](https://github.com/gingerhot/asdf-coq).
 
 Run:
 
