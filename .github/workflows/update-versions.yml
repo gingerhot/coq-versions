@@ -1,8 +1,8 @@
 name: Update Coq Versions
 
-on: push
-  # schedule:
-  #- cron: '0 0 * * *'
+on:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   update_versions:
