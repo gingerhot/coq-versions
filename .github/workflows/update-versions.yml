@@ -27,8 +27,5 @@ jobs:
             git config --global user.name "B1nj0y"
             git add .
             git commit -m "Update Coq version list"
+            git push
         fi
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
