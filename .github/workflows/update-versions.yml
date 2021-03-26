@@ -11,21 +11,17 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - uses: actions/setup-ruby@v1
+    - name: Run funcs
+      uses: gitx-io/ActionServerless@master
       with:
-        ruby-version: '2.6'
-    - name: Install dependencies
-      run: gem i rest-client
-    - name: Get Coq versions
-      id: get-versions
-      run: ruby get_versions.rb
+        filepath: ./
     - name: Git commit
       run: |
         # git commit if there's any change
         if test -n "$(git status --porcelain 2>/dev/null)"; then
-            git config --global user.email "idegorepl@gmail.com"
-            git config --global user.name "B1nj0y"
+            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
             git add .
-            git commit -m "Update Coq version list"
-            git push
+            git commit -m "Add changes"
+            git push origin ${GITHUB_REF##*/}
         fi

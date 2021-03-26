@@ -9,4 +9,6 @@ def get_versions()
 end
 
 vers = get_versions
-File.write("./versions.txt", vers.join("\n")) if vers.length > 0
+
+# GET /versions.txt
+puts vers.join("\n") unless vers.empty?
